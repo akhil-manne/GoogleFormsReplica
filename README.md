@@ -2,9 +2,15 @@
 A simple replica of google forms using Visual Basic in the frontend and Express server with Typescript in the backend.
 
 This application is specific to Windows operating system only.
-In order to run this, Visual Studio 2022 or above version is needed, with .NET 8.0 LTS, within which a project folder of 'Forms App' in VisualBasic programming language. Within that folder, the necessary files for the frontend of the form are provided in the frontend folder of this repository.
-For the backend, first, a seperate directory (please name it as 'google-forms-backend') must be created, and node modules must be installed inside it, in order to set up the express server. Once that is done, the files in the backend folder of this repository can be added to the backend directory (google-forms-backend).
+To run this application, first the backend server must be set up and then the frontend project folder must be run via Visual Studio.
+Note that the node modules in the backend folder must be downloaded by the user seperately and have not been provided in this repository. The download steps have been given below. Following it will help.
 
-After the above setup is done, firstly, in the terminal, locate to the backend directory, where node modules and the given backend files exist. Next, run the command 'npm run dev'. This will setup the Express server at port 3000. 
-Once the backend is set up, next, come to the Visual Studio project folder, which is the frontend of this application, and run the application in the editor (Press F5 or locate to the top center).
-While running, a form would open up and give options of viewing and creating a submission. The options can be used as required. One thing to note is that, while creating submissions, the entries of the data would be stored in a file called 'db.json', which would be there in the 'src' folder of the  user's backend directory (google-forms-backend).
+Firstly, download the backend folder (google-forms-backend) into one of the system's directories and navigate to that backend folder via terminal/command prompt. Then run the following commands in order to install the necessary node modules needed for setting up the Express server:
+npm init -y
+npm install express body-parser
+
+Once this is done, run the following command to start the Express server:
+npm run dev
+
+This will run the server on port 3000. Once the backend is set up, move on to the frontend, by downloading the frontend project folder (WinFormsApp2) into the same system directory where the backend folder was downloaded (for simplicity). Open this folder (WinFormsApp2) in Visual Studio and run it (by pressing Ctrl+F5 or by locating the 'run' button in the top center, preferably in Debug mode and not in Release mode). This will display the main form, and the user can use it as per their needs. 
+The data that would be entered by the user in the forms while creating a submission, will be stored in the 'db.json' file in the src folder in the backend folder (google-forms-backend).
